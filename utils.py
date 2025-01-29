@@ -1,5 +1,5 @@
 """
-PyTorch data loading
+Utility functions and data loading
 """
 from typing import Tuple, Optional
 import sys
@@ -84,7 +84,7 @@ def darus_download(repo_id, file_id, file_path):
 def load_fnocg_model(problem="thermal", dim=2, bc="per", n_layers=15, device="cuda", dtype=torch.float64, compile_model=True):
     device_key = "cpu" if device == "cpu" else "cuda"
     dtype_key = "float32" if dtype == torch.float32 else "float64"
-    model_name = f"model_thermal_2d_per"
+    model_name = f"fnocg_thermal_2d_per"
 
     if (not compile_model) or (device == "cpu"):
         print("Creating model in Python...", end=" ")

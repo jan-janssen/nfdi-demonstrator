@@ -1,3 +1,6 @@
+"""
+Utilities for plotting (including interactive widget)
+"""
 import matplotlib
 from matplotlib import pyplot as plt
 import torch
