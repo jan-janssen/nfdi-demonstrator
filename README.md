@@ -10,6 +10,12 @@ This demonstrator showcases a thermal homogenization problem of a 2D microstruct
 An interactive widget allows the user to play around with different parameters of the homogenization problem and solves it in near real-time (<10ms on state-of-the-art GPUs) to observe their implications.
 Behind the scenes, a high-fidelity simulation using the Finite Element Method (FEM) on a 400x400 grid (given directly by the microstructure image) is carried out with a GPU-accelerated implementation of our *FANS-CG* solver that features a special FFT-based preconditioner tailored to this problem.
 
+In addition to the high-fidelity simulation, this demonstrator showcases a physics-augmented machine-learned surrogate model.
+Rather than inputting the microstructure images directly into the neural network, each microstructure is characterized by 51 geometric descriptors, designed to capture essential morphological features.
+Our novel surrogate model (Voigt-Reuss-Net) takes computed microstructure features as input and predicts the effective thermal conductivity tensor $\overline{\boldsymbol{\kappa}}$.
+It provides a fast alternative to running full-field simulations, delivering instant predictions while maintaining physical admissibility by design.
+The model ensures that predicted conductivities always lie within theoretical Voigt-Reuss bounds and satisfy material symmetry requirements.
+
 ![Interactive widget](data/widget-screenshot.png?raw=true "Interactive widget")
 
 Jupyter notebook with the interactive widget and additional examples: [demonstrator.ipynb](demonstrator.ipynb)
