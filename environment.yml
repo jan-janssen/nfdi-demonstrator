@@ -1,6 +1,7 @@
 channels:
 - conda-forge
 dependencies:
+- python >=3.11
 - h5py >=3.12.1
 - pytorch>=2.5.1
 - matplotlib>=3.10.0
