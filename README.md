@@ -1,5 +1,7 @@
 # NFDI Demonstrator
 
+![demo](demo.gif)
+
 This repository contains a demonstrator for NFDI-Matwerk by the Heisenberg Professorship Data Analytics in Engineering at the University of Stuttgart.
 
 While it is assumed in many applications that components are characterized by a homogeneous microstructure, this is not always the case.
